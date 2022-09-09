@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador alura</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+   <html>
+       <head>
+       </head>
+       <body>  
+        <h1>alura</h1>        
+        <label class="Encriptadorlbl">Encriptador</label>       
+          <!-- <input id="textParaEncriptar"  type="text" class="intext" placeholder="Ingrese el texto aqui"> -->
+           <textarea id="textParaEncriptar"  type="text" class="intext" placeholder="Ingrese el texto aqui"></textarea>
+
+           <div class="frame3">  
+               <button class="boton1" type="button" onclick="encriptar()">ENCRIPTAR</button>
+               <button class="boton2"type="button" onclick="desencriptar()">DESENCRIPTAR</button>
+           </div>    
+   
+           <textarea id="textEncriptado"  type="text" class="txtEn" placeholder="Nada Para Desencriptar"></textarea>
+           <div class="rectangulo">
+               <div class="muneco">
+                   <img src="img/Muneco.png"  class="img"></div>
+               </div> 
+              <button class="boton3" type="button" onclick="copiar()">COPIAR</button>
+           </div>
+           <div>
+                <label class="creditos">Diseñado por: Alex Heresmann</label>
+            </div>
+           <div class="bandera chile" title="Chile">            
+               <div class="estrella-roja">
+                   <div class="estrella-roja2"></div>
+               </div>
+                   <div class="estrella-azul">
+                   <div class="estrella-azul2"></div>
+               </div>   
+           </div> 
+       </body>
+       </div>
+       <script src="javascript.js"></script>
+</body>
+</html>
