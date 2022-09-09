@@ -1,2 +1,2 @@
-# Ahorcado.github.io
+# juegoahocado.github.io
 Challenge Alura
