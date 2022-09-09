@@ -1,2 +1,2 @@
-# Encriptador.github.io
+# Ahorcado.github.io
 Challenge Alura
