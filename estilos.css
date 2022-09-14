@@ -74,6 +74,10 @@ h1{
     top: 240px;
  } 
 
+ .d-none{
+    display: none;
+ }
+
 .boton1{
    /* Button */
    /* Auto layout */
