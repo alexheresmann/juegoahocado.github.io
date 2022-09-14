@@ -3,8 +3,8 @@ body{
     background: rgb(242,209,5);
     background: radial-gradient(circle, rgba(242,209,5,1) 0%, rgba(32,139,144,0.94359462535014) 36%, rgba(180,73,33,1) 61%, rgba(167,205,23,1) 77%, rgba(0,0,0,1) 100%);
 */
-background: rgb(15,65,125);
-background: linear-gradient(302deg, rgba(15,65,125,0.8371520483193278) 30%, rgba(172,204,177,0.963202468487395) 71%);
+    background: rgb(63,104,251);
+    background: linear-gradient(90deg, rgba(63,104,251,1) 0%, rgba(82,179,152,1) 51%, rgba(70,252,77,1) 100%);
 }
 h1{
     font-size: 60px;
