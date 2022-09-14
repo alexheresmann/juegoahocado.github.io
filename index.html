@@ -20,11 +20,19 @@
                <button class="boton2"type="button" onclick="agregar_palabra()">Agregar Palabra</button>
             </div>
 
-           <div id="divNuevaPalabra" class="nueva_palabra d-none">                 
+           <div id="divNuevaPalabra" class="nueva_palabra d-none">  
+            <label class="">Ingrese Palabra</label>         
                 <input type="text" ></input>               
-                <button class="boton2"type="button" onclick="desencriptar()">Agregar</button>
+                <button class="boton2"type="button" onclick="Guardar()">Guardar y empezar</button>
+                <button class="boton2"type="button" onclick="Cancelar()">Cancelar</button>
             </div>  
 
+
+            <div id="divAhorcado" class="nueva_palabra d-none">  
+                <label class="">Ingrese Letras</label>         
+                    <input type="text" ></input> 
+                    <button class="boton2"type="button" onclick="Cancelar()">Cancelar</button>
+                </div>  
 
            <div>
                 <label class="creditos">Diseñado por: Alex Heresmann</label>
