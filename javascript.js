@@ -1,4 +1,5 @@
 var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat']];
+
         function encriptar(){
             let stringEncriptado = document.getElementById('textParaEncriptar').value;           
              stringEncriptado = stringEncriptado.toLowerCase();
@@ -20,19 +21,20 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
             document.getElementById('textEncriptado').value =   stringDesEncriptado;      
         }
         function copiar(){
-            console.log('aca');
-           // navigator.clipboard.writeText(document.getElementById('textEncriptado').value);
-            /*var copyText = document.getElementById("textEncriptado");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
-            alert("copieado");*/
-
             var copyText = document.getElementById("textEncriptado");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
-            
+            navigator.clipboard.writeText(copyText.value);            
             var tooltip = document.getElementById("myTooltip");
             tooltip.innerHTML = "Copied: " + copyText.value;
+        }
+
+        function agregar_palabra(){
+            document.getElementById('divBotoneraInicial').element.classList.add("d-none");
+            document.getElementById('divNuevaPalabra').element.classList.remove("d-none");
+
+
+
+
+
         }
