@@ -30,11 +30,8 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
         }
 
         function agregar_palabra(){
-            document.getElementById('divBotoneraInicial').element.classList.add("d-none");
-            document.getElementById('divNuevaPalabra').element.classList.remove("d-none");
-
-
-
-
-
+            var element = document.getElementById('divBotoneraInicial');
+            element.classList.add("d-none");
+            var element2 = document.getElementById('divNuevaPalabra');
+            element2.classList.remove("d-none");
         }
