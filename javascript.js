@@ -35,7 +35,7 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
             var element2 = document.getElementById('divNuevaPalabra');
             element2.classList.remove("d-none");
         }
-        function cancelar(){
+        function Cancelar(){
             var element = document.getElementById('divBotoneraInicial');
             element.classList.remove("d-none");            
             var element2 = document.getElementById('divNuevaPalabra');
