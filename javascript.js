@@ -50,6 +50,7 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
             var element3 = document.getElementById('divAhorcado');
             element3.classList.remove("d-none");
         }
+        
         function Empezar(){
             var element3 = document.getElementById('divAhorcado');
             element3.classList.remove("d-none");
