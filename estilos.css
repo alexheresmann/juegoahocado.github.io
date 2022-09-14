@@ -5,7 +5,6 @@ body{
 */
     background: rgb(63,104,251);
     background: linear-gradient(90deg, rgba(63,104,251,1) 0%, rgba(82,179,152,1) 51%, rgba(70,252,77,1) 100%);
-
 }
 h1{
     font-size: 60px;
