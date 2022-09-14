@@ -35,3 +35,23 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
             var element2 = document.getElementById('divNuevaPalabra');
             element2.classList.remove("d-none");
         }
+        function cancelar(){
+            var element = document.getElementById('divBotoneraInicial');
+            element.classList.remove("d-none");            
+            var element2 = document.getElementById('divNuevaPalabra');
+            element2.classList.add("d-none");
+        }
+        function Guardar(){
+            var element = document.getElementById('divBotoneraInicial');
+            element.classList.add("d-none");            
+            var element2 = document.getElementById('divNuevaPalabra');
+            element2.classList.add("d-none");
+
+            var element3 = document.getElementById('divAhorcado');
+            element3.classList.remove("d-none");
+        }
+        
+        function Empezar(){
+            var element3 = document.getElementById('divAhorcado');
+            element3.classList.remove("d-none");
+        }
