@@ -57,7 +57,23 @@ h1{
    height: 50px;
    left: 270px;
    top: 540px;
-}   
+}  
+
+/* nueva_palabra */
+/* Auto layout */
+.nueva_palabra{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 680px;
+    height: 50px;
+    left: 270px;
+    top: 240px;
+ } 
+
 .boton1{
    /* Button */
    /* Auto layout */
