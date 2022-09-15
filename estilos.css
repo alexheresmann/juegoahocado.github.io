@@ -60,35 +60,30 @@ h1{
 } 
 
 td{
-    display: inline-flex;  
+    display: inline-block;  
 } 
 
 /* nueva_palabra */
 /* Auto layout */
 .nueva_palabra{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 0px;
     gap: 24px;
     position: relative;
-    width: 680px;
+    width: 180px;
     height: 50px;
-    left: 259px;
-    top: 21px;
+    left: 560px;
+    top: 0px;
  } 
 
  .div_creditos{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 0px;
-    gap: 24px;
-    position: relative;
+    gap: 24px;   
     width: 680px;
     height: 50px;
     left: 259px;
-    top: -60px;
+
+    top: 0px;
+
  } 
 
 
@@ -221,8 +216,8 @@ transform: scale(.2);
 .chile {
 background: rgb(0, 17, 255);
 position: relative;
-top: 299px;
-left: 129px;
+top: 225px;
+left: 735px;
 }
 .chile:before {
 position:relative;
