@@ -77,14 +77,14 @@ td{
     left: 525px;
     top: 401px;
  } 
- 
+
  .div_creditos{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-    position: absolute;
+    position: relative;
     width: 680px;
     height: 50px;
     left: 600px;
@@ -222,8 +222,8 @@ transform: scale(.2);
 .chile {
 background: rgb(0, 17, 255);
 position: relative;
-top: 190px;
-left: 500px;
+top: 10px;
+left: 20px;
 }
 .chile:before {
 position:relative;
