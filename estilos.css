@@ -52,11 +52,11 @@ h1{
    align-items: flex-start;
    padding: 0px;
    gap: 24px;
-   position: absolute;
+   position: relative;
    width: 680px;
    height: 50px;
    left: 519px;
-   top: 514px;
+   top: 270px;
 } 
 
 td{
@@ -88,9 +88,8 @@ td{
     width: 680px;
     height: 50px;
     left: 259px;
-    top: 21px;
+    top: -60px;
  } 
-
 
 
  .d-none{
