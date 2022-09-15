@@ -30,7 +30,6 @@ var  matrizCodigo=['enter','imes','ai','ober','fat'];
             var tooltip = document.getElementById("myTooltip");
             tooltip.innerHTML = "Copied: " + copyText.value;
         }
-
         */
         function agregar_palabra(){
             var element = document.getElementById('divBotoneraInicial');
