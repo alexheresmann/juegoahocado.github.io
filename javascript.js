@@ -1,5 +1,7 @@
-var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat']];
+//var  matrizCodigo=[['enter'],['imes'],['ai'],['ober'],['fat']];
+var  matrizCodigo=['enter','imes','ai','ober','fat'];
 
+/*
         function encriptar(){
             let stringEncriptado = document.getElementById('textParaEncriptar').value;           
              stringEncriptado = stringEncriptado.toLowerCase();
@@ -29,6 +31,7 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
             tooltip.innerHTML = "Copied: " + copyText.value;
         }
 
+        */
         function agregar_palabra(){
             var element = document.getElementById('divBotoneraInicial');
             element.classList.add("d-none");
@@ -53,8 +56,7 @@ var  matrizCodigo=[['e','enter'],['i','imes'],['a','ai'],['o','ober'],['u','fat'
 
             var element3 = document.getElementById('divAhorcado');
             element3.classList.remove("d-none");
-        }
-                
+        }                
         function Empezar(){
             var element3 = document.getElementById('divAhorcado');
             element3.classList.remove("d-none");
