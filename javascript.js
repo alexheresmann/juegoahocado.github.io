@@ -1,36 +1,5 @@
 //var  matrizCodigo=[['enter'],['imes'],['ai'],['ober'],['fat']];
 var  matrizCodigo=['enter','imes','ai','ober','fat'];
-
-/*
-        function encriptar(){
-            let stringEncriptado = document.getElementById('textParaEncriptar').value;           
-             stringEncriptado = stringEncriptado.toLowerCase();
-             for(let i = 0; i < matrizCodigo.length; i++){
-                if(stringEncriptado.includes(matrizCodigo[i][0])){
-                    stringEncriptado = stringEncriptado.replaceAll(matrizCodigo [i][0],matrizCodigo[i][1]);
-                }
-             }      
-             document.getElementById('textEncriptado').value =   stringEncriptado;
-            }
-        function desencriptar(){
-            let stringDesEncriptado = document.getElementById('textParaEncriptar').value;           
-            stringDesEncriptado = stringDesEncriptado.toLowerCase();
-            for(let i = 0; i < matrizCodigo.length; i++){
-                if(stringDesEncriptado.includes(matrizCodigo[i][1])){
-                    stringDesEncriptado = stringDesEncriptado.replaceAll(matrizCodigo [i][1],matrizCodigo[i][0])
-                }
-            }          
-            document.getElementById('textEncriptado').value =   stringDesEncriptado;      
-        }
-        function copiar(){
-            var copyText = document.getElementById("textEncriptado");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);            
-            var tooltip = document.getElementById("myTooltip");
-            tooltip.innerHTML = "Copied: " + copyText.value;
-        }
-        */
         function agregar_palabra(){
             var element = document.getElementById('divBotoneraInicial');
             element.classList.add("d-none");
@@ -57,14 +26,13 @@ var  matrizCodigo=['enter','imes','ai','ober','fat'];
             element3.classList.remove("d-none");
         }                
         function Empezar(){
-
-            /*circulo*/ 
+            /*cabeza*/ 
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             ctx.beginPath();
             ctx.arc(190, 80, 30, 0, 2 * Math.PI);
             ctx.stroke();
-            /*circulo*/
+            /*cabeza*/
 
              /*brazo 1*/ 
             var c = document.getElementById("myCanvas");
