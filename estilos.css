@@ -63,7 +63,19 @@ td{
     display: inline-block;  
 } 
 
-.myCanvas{
+
+.divAhorcadoBTN{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: relative;
+    width: 680px;
+    height: 50px;
+    left: 19px;
+    top: 0px;
+
 
 }
 
@@ -87,8 +99,10 @@ td{
     gap: 24px;   
     width: 680px;
     height: 50px;
-    left: 259px;
-    top: 0px;
+
+    left: 20px;
+    top: 90px;
+
 
  } 
 
