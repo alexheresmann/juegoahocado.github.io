@@ -1,4 +1,5 @@
 //var  matrizCodigo=[['enter'],['imes'],['ai'],['ober'],['fat']];
+
 let  Palabras=['HTML','JAVA','ALURA','CSS','GIT', 'JAVASCRIPT', 'CANVAS'];
 let tablero = document.getElementById("myCanvas").getContext("2d");
 let PalabraSecreta = "";
@@ -27,6 +28,7 @@ let errores = 8;
       element2.classList.remove("d-none");
   }
   function Cancelar(){
+
             var element = document.getElementById('divBotoneraInicial');
             element.classList.remove("d-none");            
             var element2 = document.getElementById('divNuevaPalabra');
@@ -44,6 +46,7 @@ let errores = 8;
 
             var element3 = document.getElementById('divAhorcado');
             element3.classList.remove("d-none");
+
   }   
   
   function agregarLetraIncorrecta(){
@@ -106,6 +109,7 @@ let errores = 8;
         for(let i =0; i< PalabraSecreta.length; i++){
           tablero.moveTo(50 + (anchura*i), 320)
           tablero.lineTo(100 + (anchura*i), 320)
+
         }
         tablero.stroke();
         tablero.closePath();
