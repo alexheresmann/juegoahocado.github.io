@@ -19,30 +19,24 @@
                <button class="boton2"type="button" onclick="agregar_palabra()">Agregar Palabra</button>
             </div>
 
-           <div id="divNuevaPalabra" class="nueva_palabra d-none">  
-        
-       
+           <div id="divNuevaPalabra" class="nueva_palabra d-none">
                         <label class="">Ingrese Palabra</label>         
-                        <input type="text"></input> 
-         
+                        <input type="text"></input>          
                         <button class="boton2"type="button" onclick="Guardar()">Guardar y empezar</button>
-                        <button class="boton2"type="button" onclick="Cancelar()">Cancelar</button>
-                      
-
+                        <button class="boton2"type="button" onclick="Cancelar()">Cancelar</button> 
             </div>  
-
             <div id="divAhorcado" class="nueva_palabra d-none"> 
 
-
-
-                <canvas id="myCanvas" width="250" height="250" style="border:1px solid #000000;">
-                </canvas>
-            
-                            <label class="">Ingrese Letras</label>              
-                            <input type="text"></input> 
-                    
-                            <button class="boton2"type="button" onclick="Cancelar()">Cancelar</button>
-               
+              <!--
+                <canvas id="myCanvas" width="250" height="250" style="border:1px solid #000000;"> </canvas>
+              -->
+                <canvas id="myCanvas" width="700" height="370" class="myCanvas" ></canvas>  
+              <!--
+                  <label class="">Ingrese Letras</label>              
+                  <input type="text"></input>     
+              -->
+              <button class="boton2"type="button" onclick="Empezar()">Comenzar de nuevo</button> 
+                <button class="boton2"type="button" onclick="Cancelar()">Desistir</button>               
             </div>  
 
 

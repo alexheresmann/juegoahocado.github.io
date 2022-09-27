@@ -56,12 +56,16 @@ h1{
    width: 680px;
    height: 50px;
    left: 519px;
-   top: 270px;
+   top: 350px;
 } 
 
 td{
     display: inline-block;  
 } 
+
+.myCanvas{
+
+}
 
 /* nueva_palabra */
 /* Auto layout */
@@ -71,17 +75,18 @@ td{
     position: relative;
     width: 180px;
     height: 50px;
-    left: 560px;
+    left: 360px;
     top: 0px;
  } 
 
  .div_creditos{
+    position: relative;
     padding: 0px;
     gap: 24px;   
     width: 680px;
     height: 50px;
-    left: 259px;
-    top: 0px;
+    left: 100px;
+    top: 80px;
  } 
 
 
