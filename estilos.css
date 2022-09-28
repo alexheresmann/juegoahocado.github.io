@@ -63,7 +63,6 @@ td{
     display: inline-block;  
 } 
 
-
 .divAhorcadoBTN{
     display: flex;
     flex-direction: row;
@@ -75,21 +74,30 @@ td{
     height: 50px;
     left: 19px;
     top: 0px;
-
-
 }
 
 /* nueva_palabra */
 /* Auto layout */
 .nueva_palabra{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: relative;
+    width: 580px;
+    height: 50px;
+    left: 450px;
+    top: 350px;
+ } 
+
+ .ahorcado{
     padding: 0px;
     gap: 24px;
     position: relative;
     width: 180px;
     height: 50px;
-
     left: 360px;
-
     top: 0px;
  } 
 
@@ -99,10 +107,8 @@ td{
     gap: 24px;   
     width: 680px;
     height: 50px;
-
     left: 20px;
     top: 90px;
-
 
  } 
 

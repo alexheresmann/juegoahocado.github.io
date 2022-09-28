@@ -5,10 +5,10 @@ let tablero = document.getElementById("myCanvas").getContext("2d");
 let PalabraSecreta = "";
 let letras = [];
 let errores = 8;
+
   function escojerPalabrasecreta(){
-    let palabra = Palabras[Math.floor(Math.random() * Palabras.length)];
-    PalabraSecreta = palabra;
-    console.log(PalabraSecreta)
+    let palabraARR = Palabras[Math.floor(Math.random() * Palabras.length)];
+    PalabraSecreta = palabraARR;
   }
   function comprobarLetra(key){
     let estado = false
@@ -20,12 +20,12 @@ let errores = 8;
     console.log(key)
     return estado
   }
-
   function agregar_palabra(){
       var element = document.getElementById('divBotoneraInicial');
       element.classList.add("d-none");
       var element2 = document.getElementById('divNuevaPalabra');
       element2.classList.remove("d-none");
+      document.getElementById('in_palabra').value = '';     
   }
   function Cancelar(){
 
@@ -46,7 +46,6 @@ let errores = 8;
 
             var element3 = document.getElementById('divAhorcado');
             element3.classList.remove("d-none");
-
   }   
   
   function agregarLetraIncorrecta(){
@@ -54,7 +53,7 @@ let errores = 8;
     console.log(errores);
   }
   
-  function Empezar(){
+  function Empezar(tipo){
          errores = 8;
           var element = document.getElementById('divBotoneraInicial');
           element.classList.add("d-none");
@@ -62,13 +61,16 @@ let errores = 8;
           element2.classList.add("d-none");
           var element3 = document.getElementById('divAhorcado');
           element3.classList.remove("d-none");
-          escojerPalabrasecreta();
+
+          if(tipo == 1){
+            PalabraSecreta = document.getElementById('in_palabra').value;
+          }else{
+            escojerPalabrasecreta();
+          }          
           dibujarCanvas();
           dibujarLinea();
-
           document.onkeydown = (e) => {
-            let letra = e.key.toLocaleUpperCase()
-        
+            let letra = e.key.toLocaleUpperCase()        
             if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
               for(let i= 0; i< PalabraSecreta.length;i++){
                 if(PalabraSecreta[i] === letra){
@@ -81,9 +83,7 @@ let errores = 8;
               escribriLetraIncorrecta(letra,errores)
               dibujarHorca(errores)
             }
-
-          }
-          
+          }          
   }
   function dibujarCanvas(){
           tablero.lineWidth = 8;
@@ -93,11 +93,8 @@ let errores = 8;
           tablero.strokeStyle = "#8A3871";
           tablero.fillRect(0,0,900,630);
           tablero.beginPath();
-       //   tablero.moveTo(150,260);
-        //  tablero.lineTo(400,260);
           tablero.stroke();
-          tablero.closePath();    
-
+          tablero.closePath(); 
   }
   function dibujarLinea(){
         tablero.lineWidth = 4;
@@ -109,12 +106,10 @@ let errores = 8;
         for(let i =0; i< PalabraSecreta.length; i++){
           tablero.moveTo(50 + (anchura*i), 320)
           tablero.lineTo(100 + (anchura*i), 320)
-
         }
         tablero.stroke();
         tablero.closePath();
   }
-
   function escribriLetraCorrecta(index){
     tablero.font = "bold 63px Inter";
     tablero.lineWidth = 6;
@@ -144,10 +139,6 @@ let errores = 8;
     */
   }
   function dibujarCanvas2(){
-
-
-
-
             /*cabeza*/ 
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
@@ -239,123 +230,82 @@ let errores = 8;
             ctx.stroke();  
            /*BASE*/ 
   }
-
   function dibujarHorca(errores){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     switch(errores) {
-      case 7:
-        // code block
-          //alert('base');
-                      /*BASE*/ 
-                      ctx.moveTo(10, 240);
-                      ctx.lineTo(10, 10);
-                      ctx.stroke();
-          
-                      ctx.moveTo(20, 240);
-                      ctx.lineTo(20, 10);
-                      ctx.stroke();
-          
-                      ctx.moveTo(10, 10);
-                      ctx.lineTo(240, 10);
-                      ctx.stroke();
-          
-                      ctx.moveTo(240, 20);
-                      ctx.lineTo(20, 20);
-                      ctx.stroke();
-          
-                      ctx.moveTo(80, 20);
-                      ctx.lineTo(20, 80);
-                      ctx.stroke();
-          
-                      ctx.moveTo(70, 20);
-                      ctx.lineTo(20, 70);
-                      ctx.stroke();
-          
-                      ctx.moveTo(20, 200);
-                      ctx.lineTo(60, 200);
-                      ctx.stroke();    
-                      
-                      ctx.moveTo(60, 200);
-                      ctx.lineTo(60, 240);
-                      ctx.stroke();  
-                     /*BASE*/ 
-
+      case 7:   
+       /*BASE*/ 
+       ctx.moveTo(10, 240);
+       ctx.lineTo(10, 10);
+       ctx.stroke();          
+       ctx.moveTo(20, 240);
+       ctx.lineTo(20, 10);
+       ctx.stroke();          
+       ctx.moveTo(10, 10);
+       ctx.lineTo(240, 10);
+       ctx.stroke();          
+       ctx.moveTo(240, 20);
+       ctx.lineTo(20, 20);
+       ctx.stroke();          
+       ctx.moveTo(80, 20);
+       ctx.lineTo(20, 80);
+       ctx.stroke();          
+       ctx.moveTo(70, 20);
+       ctx.lineTo(20, 70);
+       ctx.stroke();          
+       ctx.moveTo(20, 200);
+       ctx.lineTo(60, 200);
+       ctx.stroke();                       
+       ctx.moveTo(60, 200);
+       ctx.lineTo(60, 240);
+       ctx.stroke();  
+       /*BASE*/
         break;
-      case 6:        
-        // code block
-          //alert('cuerda');
+      case 6: 
             /*cuerda*/ 
-           // var c = document.getElementById("myCanvas");
-           // var ctx = c.getContext("2d");
             ctx.moveTo(190, 48);
             ctx.lineTo(190, 15);
             ctx.stroke();
            /*Cuerda*/  
         break;
       case 5:
-          // code block
-          //alert('cabeza');
             /*cabeza*/ 
-           // var c = document.getElementById("myCanvas");
-           // var ctx = c.getContext("2d");
             ctx.beginPath();
             ctx.arc(190, 80, 30, 0, 2 * Math.PI);
             ctx.stroke();
             /*cabeza*/
-
         break;
       case 4:
-          // code block
-          //alert('tronco');
-                      /*tronco */ 
-                   //   var c = document.getElementById("myCanvas");
-                   //   var ctx = c.getContext("2d");
-                      ctx.moveTo(190, 110);
-                      ctx.lineTo(190, 160);
-                      ctx.stroke();
-                     /*tronco */ 
+             /*tronco */                   
+             ctx.moveTo(190, 110);
+             ctx.lineTo(190, 160);
+             ctx.stroke();
+             /*tronco */ 
 
         break;  
       case 3:
-          // code block
-        //  alert('brazo dere');
              /*brazo 1*/ 
-            // var c = document.getElementById("myCanvas");
-            // var ctx = c.getContext("2d");
              ctx.moveTo(190, 110);
              ctx.lineTo(150, 150);
              ctx.stroke();
              /*brazo 1*/ 
-
          break;
       case 2:
-            // code block
-          //  alert('brazo izq');
             /*brazo 2*/ 
-           // var c = document.getElementById("myCanvas");
-           // var ctx = c.getContext("2d");
             ctx.moveTo(190, 110);
             ctx.lineTo(230, 150);
             ctx.stroke();
             /*brazo 2*/ 
          break;
       case 1:
-       // alert('piernas dere');
-            // code block
             /*pierna 1*/ 
-            //var c = document.getElementById("myCanvas");
-           // var ctx = c.getContext("2d");
             ctx.moveTo(150, 200);
             ctx.lineTo(190, 160);
             ctx.stroke();
-           /*pierna 1*/  
-
-
+           /*pierna 1*/ 
          break;  
        case 0:
-        //alert('piernas izqui');
-            // code block
             /*pierna 2*/ 
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
@@ -366,6 +316,5 @@ let errores = 8;
            alert('Juego terminado');
           break;  
     }
-
   }
 
