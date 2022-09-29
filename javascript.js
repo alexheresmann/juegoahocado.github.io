@@ -62,6 +62,15 @@ let errores = 8;
           var element3 = document.getElementById('divAhorcado');
           element3.classList.remove("d-none");
 
+
+
+          var nombre = document.querySelector("#txtAhorcado");
+           nombre.focus();
+         // document.getElementById('txtAhorcado').focus();
+          
+         //document.getElementById(txtAhorcado).focus();
+
+
           if(tipo == 1){
             PalabraSecreta = document.getElementById('in_palabra').value;
           }else{
@@ -77,7 +86,6 @@ let errores = 8;
                   escribriLetraCorrecta(i)
                 }
               }
-
             }else{
               agregarLetraIncorrecta(letra)
               escribriLetraIncorrecta(letra,errores)
