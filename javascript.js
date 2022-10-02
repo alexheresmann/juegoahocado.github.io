@@ -32,7 +32,7 @@ let bloquear = 0;
 
       document.getElementById('in_palabra').value = '';        
       document.getElementById("in_palabra").focus();      
-
+      //soloLetras(e);
   }
 
   function Cancelar(){
@@ -62,6 +62,36 @@ let bloquear = 0;
     console.log(errores);
   }
   
+
+  function soloLetras(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toUpperCase();
+    letras = "abcdefghijklmnñopqrstuvwxyz";
+    letras = letras.toUpperCase();
+    especiales = [8, 37, 39, 46];
+
+    tecla_especial = false
+    for(var i in especiales) {
+        if(key == especiales[i]) {
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+        return false;
+}
+
+function limpia() {
+    var val = document.getElementById("miInput").value;
+    var tam = val.length;
+    for(i = 0; i < tam; i++) {
+        if(!isNaN(val[i]))
+            document.getElementById("miInput").value = '';
+    }
+}
+
+
   function Empezar(tipo){
     correctas = 0;
         bloquear = 0;
@@ -85,16 +115,23 @@ let bloquear = 0;
         
 
             document.onkeydown = (e) => {
-              let letra = e.key.toLocaleUpperCase()        
+              let letra = e.key.toLocaleUpperCase() 
+
+              soloLetras(e);
+
               if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
                 for(let i= 0; i< PalabraSecreta.length;i++){
+
                   if(PalabraSecreta[i] === letra){
-                    console.log('aca');
+                  
+
                     if(bloquear == 0){
                       correctas = correctas + 1;
-                      console.log('aca2');
+                      
                      if(correctas == PalabraSecreta.length){                      
                         mensajeGanaste();
+                        bloquear = 1;
+
                       escribriLetraCorrecta(i);                     
                      }else{
                       escribriLetraCorrecta(i);
