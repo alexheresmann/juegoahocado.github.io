@@ -205,54 +205,57 @@ function limpia() {
             /*cabeza*/ 
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
+
+            ctx.fillStyle = "rgb(255,0,0)";
+
             ctx.beginPath();
             ctx.arc(190, 80, 30, 0, 2 * Math.PI);
             ctx.stroke();
             /*cabeza*/
-
+            ctx.fillStyle = "rgb(255,0,0)";
              /*brazo 1*/ 
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
+           // var c = document.getElementById("myCanvas");
+           // var ctx = c.getContext("2d");
             ctx.moveTo(190, 110);
             ctx.lineTo(150, 150);
             ctx.stroke();
             /*brazo 1*/ 
 
             /*brazo 2*/ 
-             var c = document.getElementById("myCanvas");
-             var ctx = c.getContext("2d");
+            // var c = document.getElementById("myCanvas");
+             //var ctx = c.getContext("2d");
              ctx.moveTo(190, 110);
              ctx.lineTo(230, 150);
              ctx.stroke();
              /*brazo 2*/ 
 
             /*tronco */ 
-              var c = document.getElementById("myCanvas");
-              var ctx = c.getContext("2d");
+            //  var c = document.getElementById("myCanvas");
+            //  var ctx = c.getContext("2d");
               ctx.moveTo(190, 110);
               ctx.lineTo(190, 160);
               ctx.stroke();
              /*tronco */ 
 
             /*pierna 1*/ 
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
+           // var c = document.getElementById("myCanvas");
+           // var ctx = c.getContext("2d");
             ctx.moveTo(150, 200);
             ctx.lineTo(190, 160);
             ctx.stroke();
            /*pierna 1*/  
 
             /*pierna 2*/ 
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
+           // var c = document.getElementById("myCanvas");
+           // var ctx = c.getContext("2d");
             ctx.moveTo(230, 200);
             ctx.lineTo(190, 160);
             ctx.stroke();
            /*pierna 2*/   
 
             /*cuerda*/ 
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
+          //  var c = document.getElementById("myCanvas");
+          //  var ctx = c.getContext("2d");
             ctx.moveTo(190, 48);
             ctx.lineTo(190, 15);
             ctx.stroke();
@@ -305,9 +308,21 @@ function limpia() {
 
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.fillRect (0, 0, 700, 600);
+    
+    dibujarCanvas2();
+
+
+
     ctx.font = "30px Arial";
     ctx.fillStyle = "red";  
     ctx.fillText("Perdiste!", 310, 50);
+
+
+
+
     bloquear = 1;
   }
 

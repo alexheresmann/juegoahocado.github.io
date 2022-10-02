@@ -13,6 +13,8 @@ label{
 } 
 .myCanvas{
 position: relative;
+
+
 }
 
 .rectangulo {
@@ -614,16 +616,16 @@ opacity: 1;
         position: absolute;
         height: 40px;
         width: 40px;
-
+        left: 10px; 
         top: 0px;
-
+    }
 
     .img-linkedin{
         position: absolute;
         height: 40px;
         width: 40px;
         top: 0px;
-        left: 420px; 
+        left: 370px; 
     }  
 
     .bandera {
@@ -640,10 +642,11 @@ opacity: 1;
         top: -95px;
         left: 219px;
     }
-
-
-        top: 130px;
-        left: 220px;
+    .myCanvas{
+        position: relative;
+        left: 5px; 
+        
+    }
 
     
     .ahorcado{
