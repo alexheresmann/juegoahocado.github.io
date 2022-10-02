@@ -109,7 +109,7 @@ td{
 .txtAhorcado{
     position: relative;
     width: 20px;
-    top: 240px;
+    top: 180px;
     left: 10px;
     text-transform: uppercase;
 }
@@ -435,7 +435,7 @@ opacity: 1;
     }
     /* Frame 3 */
     /* Auto layout */
-    .frame3{       
+    .frame3{    
        
         flex-direction: row;
         align-items: flex-start;
@@ -445,7 +445,7 @@ opacity: 1;
         width: 280px;
         height: 50px;
         left: 80px;
-        top: 250px;
+        top: 150px;
     }   
     .boton1{
         /* Button */
@@ -593,9 +593,9 @@ opacity: 1;
         width: 340px;
         height: 50px;
         left: 15px;
-        top: 320px;
+        top: 300px;
+     }     
 
-     } 
 
     .Encriptadorlbl{
         color: grey;
@@ -649,7 +649,7 @@ opacity: 1;
         position: relative;
         left: 5px;  
         width: 320px;
-        height: 200px;
+        height: 180px;
     } 
 
 
