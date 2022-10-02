@@ -593,7 +593,8 @@ opacity: 1;
         width: 340px;
         height: 50px;
         left: 15px;
-        top: 350px;
+        top: 320px;
+
      } 
 
     .Encriptadorlbl{
@@ -621,7 +622,6 @@ opacity: 1;
         left: 5px; 
         top: 0px;
     }
-
     .img-linkedin{
         position: absolute;
         height: 40px;
@@ -648,8 +648,8 @@ opacity: 1;
     .myCanvas{
         position: relative;
         left: 5px;  
-        width: 350px;
-        height: 250px;
+        width: 320px;
+        height: 200px;
     } 
 
 
@@ -657,7 +657,7 @@ opacity: 1;
         padding: 0px;
        /* gap: 24px;*/
         position: absolute;
-        width: 150px;
+        width: 100px;
         height: 50px;
         left: 30px;
         top: 10px;
