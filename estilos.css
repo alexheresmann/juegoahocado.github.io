@@ -283,7 +283,7 @@ padding:0px 0px 0 0px;
 width:60%;
 height:50%;
 top:-365px;
-left:100px;
+left:104px;
 background: #ffffff;
 }
 .estrella-azul {
@@ -434,7 +434,7 @@ opacity: 1;
     /* Frame 3 */
     /* Auto layout */
     .frame3{       
-        display: flex;
+       
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
@@ -579,7 +579,7 @@ opacity: 1;
     font-size: 20px; 
     position: relative;
     left: 0px;
-    top: 230px;   
+    top: 0px;   
     }
 
     .div_creditos{
@@ -589,9 +589,8 @@ opacity: 1;
         width: 320px;
         height: 50px;
         left: 20px;
-        top: 271px;
+        top: 500px;
      } 
-
 
     .Encriptadorlbl{
         color: grey;
@@ -615,7 +614,7 @@ opacity: 1;
         position: absolute;
         height: 40px;
         width: 40px;
-        top: 220px;
+        top: 0px;
         left: 370px; 
     } 
 
@@ -623,11 +622,12 @@ opacity: 1;
         position: absolute;
         height: 40px;
         width: 40px;
-        top: 225px;
+        top: 0px;
         left: 420px; 
     }  
 
     .bandera {
+        top: 0px;
         margin: 1em;
         height: 150px;
         width: 210px; 
@@ -637,10 +637,10 @@ opacity: 1;
     .chile {
         background: rgb(0, 17, 255);
         position: relative;
-        top: 130px;
-        left: 220px;
+        top: -95px;
+        left: 219px;
     }
-    
+
     .ahorcado{
         padding: 0px;
        /* gap: 24px;*/
@@ -652,7 +652,7 @@ opacity: 1;
      } 
 
      .nueva_palabra{
-        display: flex;
+      
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
