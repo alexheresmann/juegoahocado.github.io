@@ -614,9 +614,9 @@ opacity: 1;
         position: absolute;
         height: 40px;
         width: 40px;
+
         top: 0px;
-        left: 370px; 
-    } 
+
 
     .img-linkedin{
         position: absolute;
@@ -641,6 +641,11 @@ opacity: 1;
         left: 219px;
     }
 
+
+        top: 130px;
+        left: 220px;
+
+    
     .ahorcado{
         padding: 0px;
        /* gap: 24px;*/
