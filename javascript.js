@@ -4,6 +4,7 @@ let  Palabras=['HTML','JAVA','ALURA','CSS','GIT', 'JAVASCRIPT', 'CANVAS'];
 let tablero = document.getElementById("myCanvas").getContext("2d");
 let PalabraSecreta = "";
 let letras = [];
+let correctas = 0;
 let errores = 8;
 let bloquear = 0;
 
@@ -13,6 +14,7 @@ let bloquear = 0;
   }
   function comprobarLetra(key){
     let estado = false
+
     if(key >= 65 && letras.indexOf(key) || key <= 90 && letras.indexOf(key)){
       letras.push(key)      
     }else{
@@ -21,6 +23,7 @@ let bloquear = 0;
     console.log(key)
     return estado
   }
+
   function agregar_palabra(){
       var element = document.getElementById('divBotoneraInicial');
       element.classList.add("d-none");
@@ -44,6 +47,7 @@ let bloquear = 0;
 
   }
   function Guardar(){
+
             var element = document.getElementById('divBotoneraInicial');
             element.classList.add("d-none");            
             var element2 = document.getElementById('divNuevaPalabra');
@@ -59,6 +63,7 @@ let bloquear = 0;
   }
   
   function Empezar(tipo){
+    correctas = 0;
         bloquear = 0;
          errores = 8;
           var element = document.getElementById('divBotoneraInicial');
@@ -67,7 +72,6 @@ let bloquear = 0;
           element2.classList.add("d-none");
           var element3 = document.getElementById('divAhorcado');
           element3.classList.remove("d-none");
-
           var nombre = document.querySelector("#txtAhorcado");
            nombre.focus();
 
@@ -85,11 +89,17 @@ let bloquear = 0;
               if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
                 for(let i= 0; i< PalabraSecreta.length;i++){
                   if(PalabraSecreta[i] === letra){
-
+                    console.log('aca');
                     if(bloquear == 0){
-                    escribriLetraCorrecta(i)
+                      correctas = correctas + 1;
+                      console.log('aca2');
+                     if(correctas == PalabraSecreta.length){                      
+                        mensajeGanaste();
+                      escribriLetraCorrecta(i);                     
+                     }else{
+                      escribriLetraCorrecta(i);
+                     }                 
                     }
-
                   }
                 }
               }else{
@@ -246,16 +256,22 @@ let bloquear = 0;
            /*BASE*/ 
   }  
 
-
-  function mensajePerdiaste(){
+  function mensajeGanaste(){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    ctx.fillStyle = "red";          
-    ctx.fill();         
-    alert('Juego terminado');
-    bloquear = 1;
-    
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "green";  
+    ctx.fillText("Ganaste!", 310, 50);
+}
 
+  function mensajePerdiaste(){
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "red";  
+    ctx.fillText("Perdiste!", 310, 50);
+    bloquear = 1;
   }
 
   function dibujarHorca(errores){
