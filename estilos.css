@@ -588,7 +588,7 @@ opacity: 1;
         position: absolute;
         padding: 0px;
         gap: 24px;   
-        width: 320px;
+        width: 350px;
         height: 50px;
         left: 20px;
         top: 500px;
@@ -644,13 +644,15 @@ opacity: 1;
     }
     .myCanvas{
         position: relative;
-        left: 5px;         
+        left: 5px;  
+        width: 350px;
+        height: 250px;
     }    
     .ahorcado{
         padding: 0px;
        /* gap: 24px;*/
         position: absolute;
-        width: 180px;
+        width: 150px;
         height: 50px;
         left: 5px;
         top: 50px;
