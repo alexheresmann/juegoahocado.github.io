@@ -637,9 +637,10 @@ opacity: 1;
     .chile {
         background: rgb(0, 17, 255);
         position: relative;
+
         top: 130px;
         left: 220px;
-    }
+
     
     .ahorcado{
         padding: 0px;
@@ -663,7 +664,6 @@ opacity: 1;
         left: 50px;
         top: 100px;
      }  
-
 
 
 
