@@ -80,7 +80,6 @@ let bloquear = 0;
     if(letras.indexOf(tecla) == -1 && !tecla_especial)
         return false;
 }
-
 function limpia() {
     var val = document.getElementById("miInput").value;
     var tam = val.length;
@@ -111,7 +110,6 @@ function limpia() {
           dibujarCanvas();
           dibujarLinea();
         
-
             document.onkeydown = (e) => {
               let letra = e.key.toLocaleUpperCase() 
 
