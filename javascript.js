@@ -26,8 +26,10 @@ let bloquear = 0;
       element.classList.add("d-none");
       var element2 = document.getElementById('divNuevaPalabra');
       element2.classList.remove("d-none");
+
       document.getElementById('in_palabra').value = '';        
       document.getElementById("in_palabra").focus();      
+
   }
 
   function Cancelar(){
@@ -246,6 +248,7 @@ let bloquear = 0;
            /*BASE*/ 
   }  
 
+
   function mensajePerdiaste(){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
@@ -256,6 +259,7 @@ let bloquear = 0;
     
 
   }
+
   function dibujarHorca(errores){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
