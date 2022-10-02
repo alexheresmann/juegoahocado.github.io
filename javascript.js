@@ -5,6 +5,7 @@ let tablero = document.getElementById("myCanvas").getContext("2d");
 let PalabraSecreta = "";
 let letras = [];
 let errores = 8;
+let bloquear = 0;
 
   function escojerPalabrasecreta(){
     let palabraARR = Palabras[Math.floor(Math.random() * Palabras.length)];
@@ -25,12 +26,12 @@ let errores = 8;
       element.classList.add("d-none");
       var element2 = document.getElementById('divNuevaPalabra');
       element2.classList.remove("d-none");
-      document.getElementById('in_palabra').value = '';  
-      
-      document.getElementById("in_palabra").focus();
 
-      
+      document.getElementById('in_palabra').value = '';        
+      document.getElementById("in_palabra").focus();      
+
   }
+
   function Cancelar(){
 
             var element = document.getElementById('divBotoneraInicial');
@@ -58,6 +59,7 @@ let errores = 8;
   }
   
   function Empezar(tipo){
+        bloquear = 0;
          errores = 8;
           var element = document.getElementById('divBotoneraInicial');
           element.classList.add("d-none");
@@ -78,20 +80,29 @@ let errores = 8;
           }          
           dibujarCanvas();
           dibujarLinea();
-          document.onkeydown = (e) => {
-            let letra = e.key.toLocaleUpperCase()        
-            if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
-              for(let i= 0; i< PalabraSecreta.length;i++){
-                if(PalabraSecreta[i] === letra){
-                  escribriLetraCorrecta(i)
+        
+
+            document.onkeydown = (e) => {
+              let letra = e.key.toLocaleUpperCase()        
+              if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
+                for(let i= 0; i< PalabraSecreta.length;i++){
+                  if(PalabraSecreta[i] === letra){
+
+                    if(bloquear == 0){
+                    escribriLetraCorrecta(i)
+                    }
+
+                  }
+                }
+              }else{
+                if(bloquear == 0){
+                agregarLetraIncorrecta(letra)
+                escribriLetraIncorrecta(letra,errores)
+                dibujarHorca(errores)
                 }
               }
-            }else{
-              agregarLetraIncorrecta(letra)
-              escribriLetraIncorrecta(letra,errores)
-              dibujarHorca(errores)
-            }
-          }          
+              document.getElementById('txtAhorcado').value = '';              
+            } 
   }
   function dibujarCanvas(){
           tablero.lineWidth = 8;
@@ -236,6 +247,19 @@ let errores = 8;
             ctx.stroke();  
            /*BASE*/ 
   }  
+
+
+  function mensajePerdiaste(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "red";          
+    ctx.fill();         
+    alert('Juego terminado');
+    bloquear = 1;
+    
+
+  }
+
   function dibujarHorca(errores){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
@@ -319,8 +343,11 @@ let errores = 8;
             ctx.lineTo(190, 160);
             ctx.stroke();
            /*pierna 2*/ 
-           alert('Juego terminado');
+           //bloquear = 1;
+           mensajePerdiaste();
+
           break;  
     }
   }
+
 

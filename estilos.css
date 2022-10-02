@@ -1,17 +1,23 @@
-body{  
-    /* 	
-    background: rgb(242,209,5);
-    background: radial-gradient(circle, rgba(242,209,5,1) 0%, rgba(32,139,144,0.94359462535014) 36%, rgba(180,73,33,1) 61%, rgba(167,205,23,1) 77%, rgba(0,0,0,1) 100%);
-*/
-    background: rgb(63,104,251);
-    background: linear-gradient(90deg, rgba(63,104,251,1) 0%, rgba(82,179,152,1) 51%, rgba(70,252,77,1) 100%);
+body{ 
+background: rgb(9,11,14);
+background: linear-gradient(90deg, rgba(9,11,14,1) 0%, rgba(32,89,73,1) 51%, rgba(1,13,1,1) 100%);
 }
 h1{
     font-size: 60px;
     margin-left: 60px;        
     margin-bottom: 0px;
     margin-top: 0px;
-}   
+   
+}  
+label{
+    color: grey;
+} 
+
+.myCanvas{
+position: relative;
+
+}
+
 .rectangulo {
    height: 544px;
    width: 400px;
@@ -36,27 +42,20 @@ h1{
    background: -o-linear-gradient(90deg, rgb(0, 255, 106) 10%, rgb(0, 174, 255) 90%);
    background: linear-gradient(90deg, rgb(0, 255, 21) 10%, rgb(0, 255, 221) 90%);
 }   
-.muneco{
-/* Muñeco */
-   position: absolute;
-   width: 336px;
-   height: 304px;
-   left: 20px;
-   top: 60px;
-}
+
 /* Frame 3 */
 /* Auto layout */
 .frame3{
    display: flex;
-   flex-direction: row;
+   /*flex-direction: row;*/
    align-items: flex-start;
    padding: 0px;
    gap: 24px;
    position: relative;
-   width: 680px;
+   width: 180px;
    height: 50px;
    left: 519px;
-   top: 350px;
+   top: 250px;
 } 
 
 td{
@@ -90,32 +89,34 @@ td{
     left: 450px;
     top: 350px;
  } 
-
  .ahorcado{
     padding: 0px;
-    gap: 24px;
-    position: relative;
+   /* gap: 24px;*/
+    position: absolute;
     width: 180px;
     height: 50px;
-    left: 360px;
-    top: 0px;
+    left: 200px;
+    top: 105px;
  } 
-
  .div_creditos{
-    position: relative;
+    position: absolute;
     padding: 0px;
     gap: 24px;   
     width: 680px;
     height: 50px;
     left: 20px;
-    top: 90px;
-
+    top: 271px;
  } 
-
-
- .d-none{
+.txtAhorcado{
+    position: relative;
+    width: 20px;
+    top: 270px;
+    left: 10px;
+    text-transform: uppercase;
+}
+.d-none{
     display: none;
- }
+}
 
 .boton1{
    /* Button */
@@ -542,6 +543,7 @@ opacity: 1;
     top: 370px;   
     }
     .Encriptadorlbl{
+        color: grey;
         z-index: 100;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-style: italic;
