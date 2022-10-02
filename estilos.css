@@ -444,7 +444,7 @@ opacity: 1;
         position: absolute;
         width: 280px;
         height: 50px;
-        left: 160px;
+        left: 80px;
         top: 250px;
     }   
     .boton1{
@@ -523,7 +523,7 @@ opacity: 1;
         position: relative;
         width: 680px;
         height: 50px;
-        left: 160px;
+        left: 80px;
         top: 0px;
     }
     
@@ -578,19 +578,19 @@ opacity: 1;
         color: rgb(226, 226, 226);
     }
     .creditos {
-    font-size: 20px; 
+    font-size: 18px; 
     position: relative;
     left: 0px;
     top: 0px;   
     }
-
+    
     .div_creditos{
         position: absolute;
         padding: 0px;
         gap: 24px;   
-        width: 350px;
+        width: 340px;
         height: 50px;
-        left: 20px;
+        left: 15px;
         top: 500px;
      } 
 
@@ -616,7 +616,7 @@ opacity: 1;
         position: absolute;
         height: 40px;
         width: 40px;
-        left: 10px; 
+        left: 5px; 
         top: 0px;
     }
 
@@ -639,8 +639,8 @@ opacity: 1;
     .chile {
         background: rgb(0, 17, 255);
         position: relative;
-        top: -95px;
-        left: 219px;
+        top: -110px;
+        left: 200px;
     }
     .myCanvas{
         position: relative;
@@ -648,7 +648,7 @@ opacity: 1;
         width: 350px;
         height: 250px;
     }   
-     
+
     .ahorcado{
         padding: 0px;
        /* gap: 24px;*/
