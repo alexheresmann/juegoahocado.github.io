@@ -1,5 +1,4 @@
 //var  matrizCodigo=[['enter'],['imes'],['ai'],['ober'],['fat']];
-
 let  Palabras=['HTML','JAVA','ALURA','CSS','GIT', 'JAVASCRIPT', 'CANVAS'];
 let tablero = document.getElementById("myCanvas").getContext("2d");
 let PalabraSecreta = "";
@@ -90,7 +89,6 @@ function limpia() {
             document.getElementById("miInput").value = '';
     }
 }
-
 
   function Empezar(tipo){
     correctas = 0;
@@ -311,7 +309,7 @@ function limpia() {
 
     ctx.fillStyle = "rgb(0,0,0)";
     ctx.fillRect (0, 0, 700, 600);
-    
+
     dibujarCanvas2();
 
 
