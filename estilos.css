@@ -383,9 +383,16 @@ opacity: 1;
 }
 @media (min-width: 300px) and (max-width: 900px)  {
     /* For mobile phones: */
-    h1{      
+    h1{            
         font-size: 30px;
-    }  
+        margin-left: 60px; 
+    }
+    label{
+        color: grey;
+        margin-left: 60px;
+    } 
+
+
     body{
         display: block;   
     } 
@@ -572,4 +579,17 @@ opacity: 1;
         top: 310px;
         left: 50px;
     }
+
+
+    .ahorcado{
+        padding: 0px;
+       /* gap: 24px;*/
+        position: absolute;
+        width: 180px;
+        height: 50px;
+        left: 50px;
+        top: 50px;
+     } 
+
+
 }
