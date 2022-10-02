@@ -25,7 +25,11 @@ let errores = 8;
       element.classList.add("d-none");
       var element2 = document.getElementById('divNuevaPalabra');
       element2.classList.remove("d-none");
-      document.getElementById('in_palabra').value = '';     
+      document.getElementById('in_palabra').value = '';  
+      
+      document.getElementById("in_palabra").focus();
+
+      
   }
   function Cancelar(){
 
@@ -62,14 +66,10 @@ let errores = 8;
           var element3 = document.getElementById('divAhorcado');
           element3.classList.remove("d-none");
 
-
-
           var nombre = document.querySelector("#txtAhorcado");
            nombre.focus();
-         // document.getElementById('txtAhorcado').focus();
-          
+         // document.getElementById('txtAhorcado').focus();          
          //document.getElementById(txtAhorcado).focus();
-
 
           if(tipo == 1){
             PalabraSecreta = document.getElementById('in_palabra').value;
@@ -139,7 +139,6 @@ let errores = 8;
 
     tablero.fillText(letra,50 + (20 * (10 - errorsLeft)),360,20) 
     tablero.stroke();
-
     /*
     let anchura = 350/PalabraSecreta.length;
      tablero.fillText(PalabraSecreta[index], 105 + (anchura*index),305);
@@ -203,7 +202,6 @@ let errores = 8;
             ctx.stroke();
            /*Cuerda*/   
 
-
             /*BASE*/ 
             ctx.moveTo(10, 240);
             ctx.lineTo(10, 10);
@@ -237,7 +235,7 @@ let errores = 8;
             ctx.lineTo(60, 240);
             ctx.stroke();  
            /*BASE*/ 
-  }
+  }  
   function dibujarHorca(errores){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
