@@ -6,16 +6,13 @@ h1{
     font-size: 60px;
     margin-left: 60px;        
     margin-bottom: 0px;
-    margin-top: 0px;
-   
+    margin-top: 0px;   
 }  
 label{
     color: grey;
 } 
-
 .myCanvas{
 position: relative;
-
 }
 
 .rectangulo {
@@ -102,10 +99,10 @@ td{
     position: absolute;
     padding: 0px;
     gap: 24px;   
-    width: 680px;
+    width: 380px;
     height: 50px;
     left: 20px;
-    top: 271px;
+    top: 260px;
  } 
 .txtAhorcado{
     position: relative;
@@ -209,11 +206,9 @@ td{
     color: rgb(226, 226, 226);
 
 }   
-.img{
-   width: 250px;
-   height: 250px; 
-   margin-left: 50px;
-}
+
+
+
 .txtEn{   
 z-index: 100;
 position: absolute;
@@ -240,11 +235,34 @@ width: 200px;
 float: left;
 transform: scale(0.2);
 }
+
+.img{
+    width: 250px;
+    height: 250px; 
+    margin-left: 50px;
+ }
+ 
+ .img-alura{
+     position: absolute;
+     height: 40px;
+     width: 40px;
+     top: 292px;
+     left: 660px; 
+ } 
+
+ .img-linkedin{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 292px;
+    left: 710px; 
+}  
+
 .chile {
 background: rgb(0, 17, 255);
 position: relative;
-top: 225px;
-left: 735px;
+top: 190px;
+left: 505px;
 }
 .chile:before {
 position:relative;
@@ -592,6 +610,23 @@ opacity: 1;
         margin: 0px;
         top: 0px; 
     }
+
+    .img-alura{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        top: 220px;
+        left: 370px; 
+    } 
+
+    .img-linkedin{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        top: 225px;
+        left: 420px; 
+    }  
+
     .bandera {
         margin: 1em;
         height: 150px;
@@ -602,10 +637,11 @@ opacity: 1;
     .chile {
         background: rgb(0, 17, 255);
         position: relative;
-        top: 120px;
-        left: 250px;
-    }
 
+        top: 130px;
+        left: 220px;
+
+    
     .ahorcado{
         padding: 0px;
        /* gap: 24px;*/
@@ -628,6 +664,7 @@ opacity: 1;
         left: 50px;
         top: 100px;
      }  
+
 
 
 }

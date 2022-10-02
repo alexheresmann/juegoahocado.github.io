@@ -70,8 +70,6 @@ let bloquear = 0;
 
           var nombre = document.querySelector("#txtAhorcado");
            nombre.focus();
-         // document.getElementById('txtAhorcado').focus();          
-         //document.getElementById(txtAhorcado).focus();
 
           if(tipo == 1){
             PalabraSecreta = document.getElementById('in_palabra').value;
