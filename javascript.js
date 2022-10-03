@@ -109,25 +109,20 @@ function limpia() {
           }          
           dibujarCanvas();
           dibujarLinea();
-        
-            document.onkeydown = (e) => {
+          let letra = "";
+            document.onkeyup = (e) => {
              // let letra = e.key.toLocaleUpperCase() 
-              let letra =   document.getElementById('txtAhorcado').value.toLocaleUpperCase() 
+              letra =   document.getElementById('txtAhorcado').value.toLocaleUpperCase() 
               soloLetras(e);
 
               if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
                 for(let i= 0; i< PalabraSecreta.length;i++){
-
-                  if(PalabraSecreta[i] === letra){
-                  
-
+                  if(PalabraSecreta[i] === letra){   
                     if(bloquear == 0){
-                      correctas = correctas + 1;
-                      
+                      correctas = correctas + 1;                      
                      if(correctas == PalabraSecreta.length){                      
                         mensajeGanaste();
                         bloquear = 1;
-
                       escribriLetraCorrecta(i);                     
                      }else{
                       escribriLetraCorrecta(i);
@@ -142,7 +137,7 @@ function limpia() {
                 dibujarHorca(errores)
                 }
               }
-              document.getElementById('txtAhorcado').value = '';              
+              document.getElementById("txtAhorcado").value = "";
             } 
   }
   function dibujarCanvas(){
