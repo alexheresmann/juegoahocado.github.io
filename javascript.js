@@ -96,7 +96,7 @@ function limpia() {
         bloquear = 0;
          errores = 8;
          letracorrectas = [];
-         
+
           var element = document.getElementById('divBotoneraInicial');
           element.classList.add("d-none");
           var element2 = document.getElementById('divNuevaPalabra');
@@ -119,8 +119,7 @@ function limpia() {
              // let letra = e.key.toLocaleUpperCase() 
               letra =   document.getElementById('txtAhorcado').value.toLocaleUpperCase() 
 
-              soloLetras(e);
-              
+              soloLetras(e);              
 
               for(let i= 0; i< letracorrectas.length;i++){
                 if(letracorrectas[i] == letra ){
