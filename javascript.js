@@ -95,6 +95,8 @@ function limpia() {
     correctas = 0;
         bloquear = 0;
          errores = 8;
+         letracorrectas = [];
+         
           var element = document.getElementById('divBotoneraInicial');
           element.classList.add("d-none");
           var element2 = document.getElementById('divNuevaPalabra');
