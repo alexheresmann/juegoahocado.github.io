@@ -118,17 +118,13 @@ function limpia() {
             document.onkeyup = (e) => {
              // let letra = e.key.toLocaleUpperCase() 
               letra =   document.getElementById('txtAhorcado').value.toLocaleUpperCase() 
-
-              soloLetras(e);              
-
+              soloLetras(e);
               for(let i= 0; i< letracorrectas.length;i++){
                 if(letracorrectas[i] == letra ){
                   document.getElementById("txtAhorcado").value = "";
                   return ;
                 }
-              }
-
-             
+              }             
               if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
                 for(let i= 0; i< PalabraSecreta.length;i++){
                   if(PalabraSecreta[i] === letra){   
