@@ -3,6 +3,8 @@ let  Palabras=['HTML','JAVA','ALURA','CSS','GIT', 'JAVASCRIPT', 'CANVAS'];
 let tablero = document.getElementById("myCanvas").getContext("2d");
 let PalabraSecreta = "";
 let letras = [];
+let letracorrectas = [];
+
 let correctas = 0;
 let errores = 8;
 let bloquear = 0;
@@ -114,12 +116,23 @@ function limpia() {
              // let letra = e.key.toLocaleUpperCase() 
               letra =   document.getElementById('txtAhorcado').value.toLocaleUpperCase() 
               soloLetras(e);
+              
 
+              for(let i= 0; i< letracorrectas.length;i++){
+                if(letracorrectas[i] == letra ){
+                  document.getElementById("txtAhorcado").value = "";
+                  return ;
+                }
+              }
+
+             
               if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
                 for(let i= 0; i< PalabraSecreta.length;i++){
                   if(PalabraSecreta[i] === letra){   
                     if(bloquear == 0){
-                      correctas = correctas + 1;                      
+                      correctas = correctas + 1;  
+                      letracorrectas.push(letra);    
+
                      if(correctas == PalabraSecreta.length){                      
                         mensajeGanaste();
                         bloquear = 1;
@@ -130,6 +143,7 @@ function limpia() {
                     }
                   }
                 }
+
               }else{
                 if(bloquear == 0){
                 agregarLetraIncorrecta(letra)
@@ -137,8 +151,12 @@ function limpia() {
                 dibujarHorca(errores)
                 }
               }
+              
               document.getElementById("txtAhorcado").value = "";
             } 
+
+
+
   }
   function dibujarCanvas(){
           tablero.lineWidth = 8;
