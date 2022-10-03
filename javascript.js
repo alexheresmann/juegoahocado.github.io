@@ -111,8 +111,8 @@ function limpia() {
           dibujarLinea();
         
             document.onkeydown = (e) => {
-              let letra = e.key.toLocaleUpperCase() 
-
+             // let letra = e.key.toLocaleUpperCase() 
+              let letra =   document.getElementById('txtAhorcado').value.toLocaleUpperCase() 
               soloLetras(e);
 
               if(  comprobarLetra(letra) && PalabraSecreta.includes(letra)){
