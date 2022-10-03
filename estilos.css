@@ -645,8 +645,6 @@ opacity: 1;
         width: 320px;
         height: 150px;
     } 
-
-
     .ahorcado{
         padding: 0px;
        /* gap: 24px;*/
@@ -663,12 +661,20 @@ opacity: 1;
         padding: 0px;
         gap: 24px;
         position: relative;
-        width: 200px;
+        width: 100px;
         height: 50px;
-        left: 50px;
-        top: 100px;
+        left: 20px;
+        top: 50px;
      }  
-
-
+     .divBotoneraNuevoPalabra{
+        flex-direction: column;
+        padding: 0px;
+        /* gap: 20px; */
+        position: absolute;
+        width: 186px;
+        height: 50px;
+        left: 80px;
+        top: 59px;
+     }
 
 }
